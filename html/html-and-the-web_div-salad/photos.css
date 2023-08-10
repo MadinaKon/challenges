@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 500px;
+  border-radius: 12px;
+}
+
+.animal {
+  width: 200px;
+  border-radius: 50%;
+}

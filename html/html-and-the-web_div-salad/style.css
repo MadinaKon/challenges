@@ -1,0 +1,30 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  height: 10px;
+}
+
+.section-list {
+  background-color: rgb(red, green, blue);
+}
+
+section {
+  background-color: green;
+}
+
+a {
+  color: black;
+  text-decoration: solid;
+}
