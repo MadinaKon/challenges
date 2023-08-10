@@ -1,3 +1,14 @@
 * {
   box-sizing: border-box;
 }
+img {
+  border-radius: 30px;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.my-account {
+  color: gray;
+}
