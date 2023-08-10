@@ -77,6 +77,10 @@ section {
 
 .subtitle {
   /* your solution */
+  border-left: solid 3px gold;
+  border-right: solid 3px gold;
+  justify-content: center;
+  display: inline;
 }
 
 /* ------- List ------- */
