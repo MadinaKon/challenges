@@ -34,24 +34,28 @@ button {
   border: tomato;
   border-radius: 20%;
   color: aqua;
+  text-transform: uppercase;
 }
 
 .button2 {
   /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
   color: aqua;
-  background-color: thistle;
+  background-color: tomato;
+  border-radius: 20px;
 }
 
 .button3 {
   /*Style me! You can test out changing the font, or font size, ...*/
-  font: italic;
+
   font-size: medium;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .button4 {
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
-  text-shadow: 2px 2px;
-  box-shadow: inset;
+  text-shadow: 20px 20px;
+  box-shadow: cadetblue;
 }
 
 /* Feel free to play around with other properties, as well. */
