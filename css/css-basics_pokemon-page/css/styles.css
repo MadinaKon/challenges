@@ -5,6 +5,11 @@
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
 
 /* your solution */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
