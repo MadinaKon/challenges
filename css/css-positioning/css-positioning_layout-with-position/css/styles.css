@@ -22,6 +22,8 @@ body {
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   padding: 10px;
+  position: fixed;
+  width: 100%;
 }
 
 .header__text {
@@ -41,6 +43,9 @@ body {
   background: #140523;
   color: #ffffff;
   height: 48px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /**
@@ -53,10 +58,12 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+  position: relative;
 }
 
 .card__heading {
   margin: 0 0 10px 0;
+  /* position: absolute; */
 }
 
 /**
