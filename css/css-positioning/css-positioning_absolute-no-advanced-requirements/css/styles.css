@@ -41,24 +41,43 @@ main {
 
 .box--top-center {
   background-color: #85c1e9;
+  position: absolute;
+  top: 0px;
+  right: 220px;
 }
 
 .box--top-right {
   background-color: #5dade2;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .box--center {
   background-color: #3498db;
+  position: absolute;
+  right: 220px;
+  top: 220px;
+  bottom: 220px;
 }
 
 .box--bottom-left {
   background-color: #2874a6;
+  position: absolute;
+  bottom: 0;
 }
 
 .box--bottom-center {
   background-color: #21618c;
+  position: absolute;
+  bottom: 0;
+  right: 220px;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
+  background-color: #1b4f72;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
