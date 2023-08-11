@@ -23,6 +23,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   padding: 10px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -75,6 +76,9 @@ body {
   padding: 6px 12px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  position: absolute;
+  top: 0;
+  right: 3px;
 }
 
 /**
