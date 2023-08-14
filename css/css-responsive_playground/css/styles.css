@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 50%;
   height: 100px;
 }
 
@@ -71,6 +71,18 @@ h1 {
 
   width: 100px;
   height: 100px;
+}
+
+@media screen and (min-width: 600px) {
+  .box--two {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--two {
+    width: 400px;
+  }
 }
 
 .box--three {
