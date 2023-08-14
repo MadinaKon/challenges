@@ -33,15 +33,6 @@ ul {
 .navigation__menu {
   display: flex;
   justify-items: center;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-.navigation__link .first {
-  align-items: flex-start;
-}
-
-.navigation__link .last {
-  align-items: flex-end;
 }
