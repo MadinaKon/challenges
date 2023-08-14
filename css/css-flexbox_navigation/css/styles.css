@@ -32,7 +32,5 @@ ul {
 
 .navigation__menu {
   display: flex;
-  justify-items: center;
-  align-items: center;
   justify-content: space-between;
 }
