@@ -26,6 +26,8 @@ body {
   min-height: 50vh;
 
   /* Add styles to the grid container */
+  display: grid;
+  grid-template-areas: "spring", "summer", "autumn", "winter";
 }
 
 .teaser-grid__teaser {
@@ -52,6 +54,7 @@ body {
 .teaser-grid__teaser--winter {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://source.unsplash.com/random/600x300?winter");
+  grid-area: winter;
 }
 
 .teaser-grid__link {
