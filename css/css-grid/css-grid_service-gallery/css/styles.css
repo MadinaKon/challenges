@@ -25,6 +25,8 @@ body {
   margin: auto;
 
   /* Add styles to the container */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .services__item {
