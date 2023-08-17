@@ -21,6 +21,7 @@ body {
   gap: 1rem;
   padding: 1rem;
   /* Add styles here */
+  grid-template-areas: "banana apple melon" "peach tomato cauliflower";
 }
 
 .image-board__image {
@@ -31,26 +32,40 @@ body {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+/* .image-board__image--1 {
+  grid-area: banana;
+  grid-row-start: banana;
+  grid-column-start: banana;
+  grid-row-end: banana;
+  grid-column-end: banana;
+} */
+
 .image-board__image--1 {
   /* Add styles here */
+  grid-area: banana;
 }
 
 .image-board__image--2 {
   /* Add styles here */
+  grid-area: apple;
 }
 
 .image-board__image--3 {
   /* Add styles here */
+  grid-area: melon;
 }
 
 .image-board__image--4 {
   /* Add styles here */
+  grid-area: peach;
 }
 
 .image-board__image--5 {
   /* Add styles here */
+  grid-area: tomato;
 }
 
 .image-board__image--6 {
   /* Add styles here */
+  grid-area: cauliflower;
 }
