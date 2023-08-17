@@ -30,4 +30,8 @@ console.log("the number of likes at the beginning " + numberOfLikes);
 console.log("the user who created the post " + postAuthor);
 console.log("is it reported? " + isReported);
 
+let numberOfLike = 1000;
+numberOfLike++;
+
+console.log(numberOfLike);
 // --^-- write your code here --^--
