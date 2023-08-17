@@ -1,3 +1,21 @@
 * {
   box-sizing: border-box;
 }
+img {
+  border-radius: 30px;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.my-account {
+  color: gray;
+}
+
+.arrow-button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #add8e6;
+}
