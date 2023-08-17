@@ -13,7 +13,7 @@ console.clear();
 const title = "Daily Mail";
 const text =
   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ";
-const numberOfLikes = 33;
+let numberOfLikes = 33;
 const postAuthor = "Madina";
 const isReported = true;
 
@@ -30,8 +30,8 @@ console.log("the number of likes at the beginning " + numberOfLikes);
 console.log("the user who created the post " + postAuthor);
 console.log("is it reported? " + isReported);
 
-let numberOfLike = 1000;
-numberOfLike++;
+numberOfLikes = numberOfLikes += 1000;
+numberOfLikes++;
 
-console.log(numberOfLike);
+console.log(numberOfLikes);
 // --^-- write your code here --^--
