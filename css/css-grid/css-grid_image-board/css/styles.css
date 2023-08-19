@@ -16,8 +16,8 @@ body {
 
 .image-board__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 200px 300px;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  grid-template-rows: 300px 200px 300px; /* Three rows */
   gap: 1rem;
   padding: 1rem;
   /* Add styles here */
@@ -43,6 +43,7 @@ body {
 .image-board__image--1 {
   /* Add styles here */
   grid-area: banana;
+  /* grid-row-start: 500px */
 }
 
 .image-board__image--2 {
