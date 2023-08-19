@@ -17,8 +17,10 @@ const personAlex = {
   age: 24,
 };
 
-const nameOfAlex = personAlex["name"];
-const ageOfAlex = personAlex["age"];
+// const nameOfAlex = personAlex["name"];
+const nameOfAlex = personAlex.name;
+// const ageOfAlex = personAlex["age"];
+const ageOfAlex = personAlex.age;
 
 console.log(" nameOfAlex ", nameOfAlex);
 console.log("ageOfAlex ", ageOfAlex);
@@ -32,8 +34,11 @@ const personToChange = {
   age: 24,
 };
 
-personToChange["name"] = "Alex";
-personToChange["age"] = 35;
+// personToChange["name"] = "Alex";
+// personToChange["age"] = 35;
+
+personToChange.name = "Alex";
+personToChange.age = 35;
 
 console.log("personToChange ", personToChange);
 
@@ -46,7 +51,10 @@ const petPluto = {
 };
 
 petPluto.age = 5;
-petPluto.species = "husky";
+petPluto.breed = "husky";
+
+// spread operator
+petPluto = { ...petPluto, age: 5, breed: "husky" };
 
 console.log("petPluto  ", petPluto);
 

@@ -50,13 +50,15 @@ const people = [
 // EXERCISE 1
 // Change the value of the variable nameOfFirstPerson to equal the name of the first person.
 
-const nameOfFirstPerson = people[0];
+const nameOfFirstPerson = people[0].name;
 console.log("nameOfFirstPerson ", nameOfFirstPerson);
 
 // EXERCISE 2
 // Change the value of the variable homersOtherFriends to equal the other friends of Homer.
 
-const homersOtherFriends = nameOfFirstPerson["other friends"];
+//const homersOtherFriends = nameOfFirstPerson["other friends"];
+
+const homersOtherFriends = people[0]["other friends"];
 console.log("homersOtherFriends ", homersOtherFriends);
 
 // EXERCISE 3
