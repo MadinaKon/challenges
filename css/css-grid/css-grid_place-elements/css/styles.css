@@ -43,29 +43,55 @@ body {
 .element-1 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
+/* [ ] - .element__2 should start at column five and go until the end */
 .element-2 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column-start: 5;
+  /* fix me */
+  grid-column-end: span 6;
 }
+
+/* [ ] - .element__5 should span two columns and two rows */
 
 .element-5 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column-start: 2;
+  /* fix me */
+  /* grid-column-end: 4; */
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
+/* [ ] - .element__8 should span two rows */
 .element-8 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-row-start: span 2;
+  /* fix me  */
+  /* grid-row-end: 4; */
 }
 
+/* [ ] - .element__fish should be in row one and span the entire grid width */
 .element-fish {
   background-color: #3a67a4;
   /* Add styles here */
+  /* fix me */
+  grid-column-start: 1;
+  grid-column-end: span 10;
+  grid-row-start: 1;
 }
+
+/* [ ] - .element__20 should start at row six and span two rows */
 
 .element-20 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-row-start: 6;
+  grid-row-end: span 2;
 }
