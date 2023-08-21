@@ -7,7 +7,7 @@ console.clear();
 */
 
 function printSquare(number) {
-  let square = number * number;
+  const square = number * number;
   console.log(square);
 }
 
@@ -22,8 +22,7 @@ printSquare(5);
 
 // Uncomment the following function calls and implement the function printCircumference
 function printCircumference(radius) {
-  const Pi = 3.14159;
-  let circumference = 2 * Pi * radius;
+  let circumference = 2 * Math.PI * radius;
   console.log(circumference);
 }
 
@@ -44,5 +43,8 @@ function printRectangleArea(width, length) {
   console.log(`The area of the rectangle is ${area}`);
 }
 
+function printRectangleArea(width, length) {
+  console.log("The area of the rectangle is " + width * length);
+}
 printRectangleArea(5, 7);
 printRectangleArea(3, 4);
