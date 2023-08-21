@@ -12,15 +12,22 @@ let dia1 = pizzaInput1.value;
 let dia2 = pizzaInput2.value;
 
 pizzaInput1.addEventListener("input", (event) => {
-  dia1 = event.target.value;
+  // dia1 = event.target.value;
+
+  dia1 = pizzaInput1.value;
   console.log("pizzaSize1: ", dia1);
-  calculatePizzaGain(dia1, dia2);
+  calculatePizzaGain(dia1, pizza1);
+
+  updatePizzaDisplay(pizza1, dia1);
 });
 
 pizzaInput2.addEventListener("input", (event) => {
-  dia2 = event.target.value;
+  // dia2 = event.target.value;
+
+  dia2 = pizzaInput2.value;
   console.log("pizzaSize2 ", dia2);
-  calculatePizzaGain(dia1, dia2);
+  calculatePizzaGain(dia1, pizza2);
+  updatePizzaDisplay(pizza2, dia2);
 });
 
 // Task 1
@@ -46,6 +53,11 @@ calculatePizzaGain(dia1, dia2);
 
 // Task 2
 // define the function updatePizzaDisplay here
+function updatePizzaDisplay(pizzaElement, newSize) {
+  const result = (newSize / 24) * 100;
+
+  pizzaElement.style.width = `${result}px`;
+}
 
 // Task 3
 // define the function updateOutputColor here
