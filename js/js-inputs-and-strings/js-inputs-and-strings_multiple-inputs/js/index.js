@@ -16,15 +16,9 @@ const secondInput = document.querySelector("[data-js=second-input]");
 const button = document.querySelector("[data-js=button]");
 
 // 1. On button click: The value of the first input field is copied into the second input field
-// button.addEventListener("click", () => {
-//   let copyFirst = firstInput.value;
-
-//   secondInput.value = copyFirst;
-
-//   console.log("firstInput.value ", firstInput.value);
-//   console.log("secondInput.value ", secondInput.value);
-//   console.log("copyFirst ", copyFirst);
-// });
+button.addEventListener("click", () => {
+  secondInput.value = firstInput.value;
+});
 
 // 2. On button click: The value of the first input field is copied in uppercase into the second input field
 // button.addEventListener("click", () => {
@@ -32,9 +26,9 @@ const button = document.querySelector("[data-js=button]");
 // });
 
 // 3. On button click: The values of the two input fields switch.
-button.addEventListener("click", () => {
-  let tempVariable = firstInput.value;
+// button.addEventListener("click", () => {
+//   let tempVariable = firstInput.value;
 
-  firstInput.value = secondInput.value;
-  secondInput.value = tempVariable;
-});
+//   firstInput.value = secondInput.value;
+//   secondInput.value = tempVariable;
+// });
