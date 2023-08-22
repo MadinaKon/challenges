@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>HTML Zoo Form</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -21,20 +22,42 @@
           <legend>Enter your information</legend>
 
           <!-- Email: label & input -->
-
+          <label for="email">Provide email:</label>
+          <input type="email" name="email" id="email" />
           <!-- Date: label & input -->
-
+          <label for="date">Provide date of your arrival:</label>
+          <input type="date" />
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
             <!-- Radio Buttons: labels & inputs -->
+            <label for="option-1">relaxed sloths</label>
+            <input type="radio" name="option-1" id="option-1" />
+
+            <label for="option-2">jumpy kangaroos</label>
+            <input type="radio" name="option-2" id="option-2" />
+            <label for="option-3">thieving racoons</label>
+            <input type="radio" name="option-3" id="option-3" />
           </fieldset>
 
           <!-- Textarea: label & input -->
+          <label for="comment">Any Concerns?</label>
+          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
 
           <!-- Two Checkboxes: labels & inputs -->
+          <label for="checkbox-gdpr"
+            >Accept the processing of your data
+            <input type="checkbox" name="checkbox-gdpr" id="checkbox-gdpr" />
+          </label>
+
+          <label for="newsletter"
+            >Sign up for the newsletter
+            <input type="checkbox" name="newsletter" id="newsletter" />
+          </label>
 
           <!-- Two Buttons: reset & submit -->
+          <button type="reset">Reset the entire form</button>
+          <button type="submit">Submit your request</button>
         </fieldset>
       </form>
     </section>
