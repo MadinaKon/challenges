@@ -18,19 +18,21 @@ For further information check MDN:
 
 */
 
-const colorInput = document.querySelector('[data-js="input-color"]');
-const radiusInput = document.querySelector('[  data-js="input-radius"]');
-const rotationInput = document.querySelector('[data-js="input-rotation"]');
+const inputColor = document.querySelector('[data-js="input-color"]');
+const inputRadius = document.querySelector('[data-js="input-radius"]');
+const inputRotation = document.querySelector('[data-js="input-rotation"]');
 const box = document.querySelector('[data-js="box"]');
 
-colorInput.addEventListener("input", (e) => {
-  box.style.background = `hsl(${e.target.value}, 70%, 60%)`;
+inputColor.addEventListener("input", () => {
+  box.style.background = `hsl(${inputColor.value}deg, 70%, 60%)`;
 });
 
-radiusInput.addEventListener("input", (e) => {
-  box.style.borderRadius = `${e.target.value}px`;
+inputRadius.addEventListener("input", () => {
+  const borderRadiusString =
+    inputRadius.value === "50" ? "50%" : `${inputRadius.value}px`;
+  box.style.borderRadius = borderRadiusString;
 });
 
-rotationInput.addEventListener("input", (e) => {
-  box.style.transform = `rotate(${e.target.value}deg)`;
+inputRotation.addEventListener("input", () => {
+  box.style.transform = `rotate( ${inputRotation.value}deg)`;
 });
