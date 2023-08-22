@@ -28,20 +28,13 @@ const button = document.querySelector("[data-js=button]");
 
 // 2. On button click: The value of the first input field is copied in uppercase into the second input field
 // button.addEventListener("click", () => {
-//   const oldValue = firstInput.value;
-//   const newValue = oldValue.toUpperCase();
-
-//   secondInput.value = newValue;
-
-//   console.log("firstInput.value ", firstInput.value);
-//   console.log("newValue ", newValue);
-//   console.log("secondInput.value ", secondInput.value);
+//   secondInput.value = firstInput.value.toUpperCase();
 // });
 
 // 3. On button click: The values of the two input fields switch.
 button.addEventListener("click", () => {
-  let extraCup = firstInput.value;
+  let tempVariable = firstInput.value;
 
   firstInput.value = secondInput.value;
-  secondInput.value = extraCup;
+  secondInput.value = tempVariable;
 });
