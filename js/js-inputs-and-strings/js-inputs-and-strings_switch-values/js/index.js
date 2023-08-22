@@ -27,14 +27,17 @@ lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
 });
 
-// uppercaseButton.addEventListener("click", () => {
-//   secondInput.value = secondInput.value.toUpperCase();
-// });
+uppercaseButton.addEventListener("click", () => {
+  secondInput.value = secondInput.value.toUpperCase();
+});
 
-// lowercaseButton.addEventListener("click", () => {
-//   secondInput.value = secondInput.value.toLowerCase();
-// });
+lowercaseButton.addEventListener("click", () => {
+  secondInput.value = secondInput.value.toLowerCase();
+});
 
-switchButton.addEventListener("click", (event) => {
-  console.log("switchButton is clicked", event);
+switchButton.addEventListener("click", () => {
+  let extraCup = firstInput.value;
+
+  firstInput.value = secondInput.value;
+  secondInput.value = extraCup;
 });
