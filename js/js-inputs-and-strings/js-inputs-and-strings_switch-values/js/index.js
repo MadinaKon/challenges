@@ -36,8 +36,8 @@ lowercaseButton.addEventListener("click", () => {
 });
 
 switchButton.addEventListener("click", () => {
-  let extraCup = firstInput.value;
+  let tempVariable = firstInput.value;
 
   firstInput.value = secondInput.value;
-  secondInput.value = extraCup;
+  secondInput.value = tempVariable;
 });
