@@ -12,14 +12,18 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+hideTosError();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  const tos = event.target.elements.tos.checked;
 
   // --v-- write your code here --v--
-  if (!checkBox.checked) {
+  if (!tos) {
+    showTosError();
     return;
   }
-
+  hideTosError();
   // --^-- write your code here --^--
   alert("Form submitted");
 });
