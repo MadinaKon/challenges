@@ -36,12 +36,19 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
-  console.log(data);
-
-  console.log("ADD ", add(numberA.value + numberB.value));
+  console.log("DATA ", data);
+  console.log("data.numberA ", typeof parseInt(data.numberA));
+  console.log("data.numberB ", typeof parseInt(data.numberB));
 
   if (data.operator === "addition") {
-    result = add(parseInt(numberA.value) + parseInt(numberB.value));
+    // result = add(data.numberA * 1 + data.numberB * 1);
+    // result = add(parseInt(data.numberA) + parseInt(data.numberB));
+    // result = add(parseInt(data.numberA + data.numberB));
+    // result = Number(add(data.numberA + data.numberB));
+    // result = Number(add(data.numberA + " " + data.numberB));
+    // result = add(data.numberA + " " + data.numberB);
+    // result = add(parseInt(data.numberA) + parseInt(data.numberB));
+    result = add(parseInt(data.numberA + data.numberB));
     console.log("RESULT ", result);
 
     return result;
