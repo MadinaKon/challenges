@@ -11,6 +11,7 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+// make the error message hidden initially (before the form is submitted)
 hideTosError();
 
 form.addEventListener("submit", (event) => {
