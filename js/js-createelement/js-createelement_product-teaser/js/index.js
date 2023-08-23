@@ -13,11 +13,11 @@ const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
 productArticle.innerHTML +=
-  '<article class="product">' +
   '<div class="product__body">' +
   '<div class="product__text-container">' +
-  '<h2 class="product__name">Anemonefish</h2>' +
+  '<h2 class="product__name">' +
   name +
+  "</h2>" +
   '<ul class="product__categories">' +
   '<li class="product__category">' +
   category1 +
@@ -44,6 +44,12 @@ productArticle.innerHTML +=
   '<span class="product__price">' +
   price +
   "</span>" +
-  '<button type="button" class="product__buy-button">Buy</button>' +
-  "</footer>" +
-  "</article>";
+  '<button type="button" class="product__buy-button-2">Buy</button>' +
+  "</footer>";
+
+const buttonTwo = document.querySelector(".product__buy-button-2");
+console.log("buttonTwo ", buttonTwo);
+
+buttonTwo.addEventListener("click", () => {
+  console.log(name, price);
+});
