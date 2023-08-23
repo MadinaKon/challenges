@@ -2,7 +2,6 @@ console.clear();
 
 const form = document.querySelector('[data-js="form"]');
 const tosError = document.querySelector('[data-js="tos-error"]');
-const checkBox = document.getElementById("tos");
 
 function hideTosError() {
   tosError.setAttribute("hidden", "");
