@@ -73,7 +73,8 @@ body {
   font-weight: bold;
 }
 
-.product__buy-button {
+.product__buy-button,
+.product__buy-button-2 {
   all: unset;
   background-color: #13c7a0;
   color: white;
