@@ -16,14 +16,18 @@ hideTosError();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const tos = event.target.elements.tos.checked;
+  const isTosChecked = event.target.elements.tos.checked;
 
-  // --v-- write your code here --v--
-  if (!tos) {
+  // if (!isTosChecked) {
+  //   showTosError();
+  //   return;
+  // }
+  // hideTosError();
+
+  if (isTosChecked) {
+    hideTosError();
+  } else {
     showTosError();
-    return;
   }
-  hideTosError();
-  // --^-- write your code here --^--
   alert("Form submitted");
 });
