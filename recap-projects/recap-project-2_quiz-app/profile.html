@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Quiz App</h1>
+    </header>
+    <main>
+      <section class="profile">
+        <div class="profile__name-wrapper">
+          <img
+            class="profile__icon active"
+            src="./assets/profile_filled.png"
+            alt="profile filled"
+          />
+          <h2 class="profile__name">Max Doe</h2>
+        </div>
+        <h3 class="profile__about-me-header">About me</h3>
+        <p class="profile__about-me-content">Lorum ipsum</p>
+        <div class="profile__button-wrapper">
+          <button class="profile__question-button">
+            <img src="assets/question.png" />
+            <span>12</span>
+          </button>
+          <button class="profile__bookmark-button">
+            <img src="assets/bookmark_filled.png" />
+            <span>4</span>
+          </button>
+        </div>
+      </section>
+      <section class="settings">
+        <h2 class="settings__title">Settings</h2>
+        <div class="settings__dark-mode-wrapper">
+          <label for="dark-mode" class="settings__dark-mode-label"
+            >Dark Mode</label
+          >
+          <div class="switch-container">
+            <input id="dark-mode" type="checkbox" />
+            <div class="switch"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="index.html" class="footer__link">
+        <img class="footer__icon" src="./assets/home.png" alt="home" />
+      </a>
+      <a href="bookmark.html" class="footer__link">
+        <img
+          class="footer__icon"
+          src="./assets/bookmark_transparent.png"
+          alt="bookmark"
+        />
+      </a>
+      <a href="profile.html" class="footer__link footer__link--active">
+        <img
+          class="footer__icon"
+          src="./assets/profile_filled.png"
+          alt="profile"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
