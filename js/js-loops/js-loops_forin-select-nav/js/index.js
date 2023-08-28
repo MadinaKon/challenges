@@ -50,9 +50,6 @@ for (let element in nav) {
   const listItem = document.createElement("li");
   const anchorTag = document.createElement("a");
 
-  console.log("nav ", nav);
-  console.log("nav[element] ", nav[element]);
-
   anchorTag.href = nav[element].href;
   anchorTag.textContent = nav[element].text;
 
