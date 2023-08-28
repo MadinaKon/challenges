@@ -21,6 +21,14 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write/change code here --v--
+// Iterate through the languages object using for...in and
+// add the option elements for this dropdown menu.
+for (let language in languages) {
+  const option = document.createElement("option");
+  option.value = languages[language];
+  option.textContent = languages[language];
+  select.append(option);
+}
 
 // --^-- write/change code here --^--
 
