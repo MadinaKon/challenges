@@ -3,10 +3,8 @@ console.clear();
 const main = document.querySelector('[data-js="main"]');
 
 // Create a list from an array
-const listItem = document.createElement("li");
 
 const ol = document.createElement("ol");
-ol.append(listItem);
 main.append(ol);
 
 const programmingLanguages = [
@@ -20,7 +18,14 @@ const programmingLanguages = [
 ];
 
 // --v-- write/change code here --v--
-for (let language of programmingLanguages) {
-  listItem.textContent = language;
+for (let programmingLanguage of programmingLanguages) {
+  // create li tag
+  // textContent one of strings inside array
+  // append the li to ol
+
+  const listItem = document.createElement("li");
+  listItem.textContent = programmingLanguage;
+
+  ol.append(listItem);
 }
 // --^-- write/change code here --^--
