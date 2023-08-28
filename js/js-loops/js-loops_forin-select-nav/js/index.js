@@ -46,5 +46,17 @@ main.append(navElement);
 navElement.append(ul);
 
 // --v-- write/change code here --v--
+for (let element in nav) {
+  const listItem = document.createElement("li");
+  const anchorTag = document.createElement("a");
 
+  console.log("nav ", nav);
+  console.log("nav[element] ", nav[element]);
+
+  anchorTag.href = nav[element].href;
+  anchorTag.textContent = nav[element].text;
+
+  listItem.append(anchorTag);
+  navElement.append(listItem);
+}
 // --^-- write/change code here --^--
