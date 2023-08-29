@@ -125,11 +125,18 @@ const pixelValues = [
 const canvas = document.querySelector('[data-js="canvas"]');
 
 for (let i = 0; i < pixelValues.length; i++) {
-  // access first character
-  console.log(pixelValues[i][0]);
+  for (let color of pixelValues) {
+    let div = document.createElement("div");
+    div.classList.add("pixel");
 
-  let div = document.createElement("div");
-  div.classList.add("pixel");
-  div.style.backgroundColor = pixelValues[i][0];
-  canvas.append(div);
+    console.log("pixelValues[color] ", color);
+    console.log("pixelValues[color] ", pixelValues[color]);
+    console.log("pixelValues[i][color] ", pixelValues[i][color]);
+    // div.style.backgroundColor = pixelValues[i][0];
+    // div.style.backgroundColor = pixelValues[color][i];
+    // div.style.backgroundColor = pixelValues[i][i];
+
+    div.style.backgroundColor = pixelValues[color[i]];
+    canvas.append(div);
+  }
 }
