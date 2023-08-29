@@ -8,16 +8,20 @@ function renderStars(filledStars = 0) {
 
   //--v-- your code here --v--
   for (let i = 1; i <= 5; i++) {
-    let image = document.createElement("img");
-    image.src = "./assets/star-empty.svg";
+    let newImage = document.createElement("img");
+    newImage.src = "./assets/star-empty.svg";
 
     if (i <= filledStars) {
-      image.src = "./assets/star-filled.svg";
+      newImage.src = "./assets/star-filled.svg";
     }
 
-    starContainer.append(image);
+    newImage.addEventListener("click", () => {
+      renderStars(i);
+    });
+
+    starContainer.append(newImage);
   }
   //--^-- your code here --^--
 }
 
-renderStars(2);
+renderStars();
