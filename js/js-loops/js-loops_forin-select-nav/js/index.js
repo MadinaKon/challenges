@@ -21,6 +21,14 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write/change code here --v--
+// Iterate through the languages object using for...in and
+// add the option elements for this dropdown menu.
+for (let language in languages) {
+  const option = document.createElement("option");
+  option.value = languages[language];
+  option.textContent = languages[language];
+  select.append(option);
+}
 
 // --^-- write/change code here --^--
 
@@ -38,5 +46,14 @@ main.append(navElement);
 navElement.append(ul);
 
 // --v-- write/change code here --v--
+for (let element in nav) {
+  const listItem = document.createElement("li");
+  const anchorTag = document.createElement("a");
 
+  anchorTag.href = nav[element].href;
+  anchorTag.textContent = nav[element].text;
+
+  listItem.append(anchorTag);
+  ul.append(listItem);
+}
 // --^-- write/change code here --^--
