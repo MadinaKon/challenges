@@ -8,7 +8,7 @@ const canvas = document.querySelector('[data-js="canvas"]');
 //   outerPixels.forEach((data) => {
 //     let div = document.createElement("div");
 //     div.classList.add("pixel");
-//     div.style.backgroundColor = " " + data + "";
+//     div.style.backgroundColor = data;
 //     canvas.append(div);
 //   });
 // });
@@ -19,10 +19,9 @@ const canvas = document.querySelector('[data-js="canvas"]');
 //   var innerArrayLength = pixelValues[i].length;
 //   // loop the inner array
 //   for (let j = 0; j < innerArrayLength; j++) {
-//     console.log("[" + i + "," + j + "] = " + pixelValues[i][j]);
 //     let div = document.createElement("div");
 //     div.classList.add("pixel");
-//     div.style.backgroundColor = " " + pixelValues[i][j] + "";
+//     div.style.backgroundColor = pixelValues[i][j];
 //     canvas.append(div);
 //   }
 // }
@@ -33,7 +32,7 @@ for (const pixel of pixelValues) {
     console.log("P ", p);
     let div = document.createElement("div");
     div.classList.add("pixel");
-    div.style.backgroundColor = " " + p + "";
+    div.style.backgroundColor = p;
     canvas.append(div);
   }
 }
