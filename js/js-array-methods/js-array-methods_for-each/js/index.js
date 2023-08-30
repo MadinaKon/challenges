@@ -22,7 +22,7 @@ const colors = [
 colors.forEach((color) => {
   const div = document.createElement("div");
   div.classList.add("color-box");
-  div.style.backgroundColor = "" + color + "";
+  div.style.backgroundColor = color;
 
   document.body.append(div);
 });
