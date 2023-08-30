@@ -1,6 +1,7 @@
 /* eslint-disable operator-linebreak */
 import { render } from "../visual/render.js";
 import { getNewRocket } from "./rocket.js";
+import {FISHSAT, NFSAT} from '../payload/satellites.js'
 
 if (!window.localStorage.getItem("state")) {
   window.localStorage.setItem(
