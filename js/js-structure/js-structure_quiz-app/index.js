@@ -1,4 +1,3 @@
-import { cards } from "./utils/cards.js";
 import Header from "./components/Header/Header.js";
 import Form from "./components/Form/Form.js";
 import CardList from "./components/CardList/CardList.js";
