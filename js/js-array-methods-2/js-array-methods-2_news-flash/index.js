@@ -10,15 +10,7 @@ const filteredNews = news.filter((card) =>
 );
 
 // Part 2 - start here
-const sortedNews = filteredNews.slice().sort((a, b) => {
-  if (a.body.length < b.body.length) {
-    return -1;
-  }
-  if (a.body.length > b.body.length) {
-    return 1;
-  }
-  return 0;
-});
+const sortedNews = filteredNews.sort((a, b) => a.body.length - b.body.length);
 
 sortedNews.forEach((news) => {
   const cardElement = Card(news);
@@ -29,4 +21,3 @@ sortedNews.forEach((news) => {
 checkFilteredNews(filteredNews);
 
 checkSortedNews(sortedNews);
-
