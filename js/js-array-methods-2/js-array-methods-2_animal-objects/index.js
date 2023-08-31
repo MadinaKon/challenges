@@ -118,10 +118,17 @@ const animalWithWeightMoreThanFivehundredExists =
   animals.some(weightMoreThan500);
 
 // Hint: Filter for Europe first, then check every animal for its weight.
-const allAnimalsInEuropeWeighLessThanOnehundred = animals.filter()
+const allAnimalsInEuropeWeighLessThanOnehundred = animals
+  .filter((animal) => animal.continents.includes("Europe"))
+  .every((animal) => animal.weight < 100);
 
 // Hint: filter + map + reduce
-const weightOfAllAnimalsInAfrica = null;
+const allAnimalsInAfrica = animals.filter((animal) =>
+  animal.continents.includes("Africa")
+);
+const weightOfAllAnimalsInAfrica = allAnimalsInAfrica
+  .map((animal) => animal.weight)
+  .reduce((prev, curr) => prev + curr);
 
 // Hint: As above, but divided by the number of animals in Africa.
 const averageWeightOfAllAnimalsInAfrica = null;
