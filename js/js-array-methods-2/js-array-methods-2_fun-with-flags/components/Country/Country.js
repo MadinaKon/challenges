@@ -1,4 +1,5 @@
 export function Country(props) {
+  console.log("props code ", props);
   const countryElement = document.createElement("li");
   countryElement.className = "country";
 
