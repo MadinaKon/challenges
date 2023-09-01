@@ -2,6 +2,7 @@ import { Wheel } from "./components/Wheel/Wheel.js";
 import { SpinButton } from "./components/SpinButton/SpinButton.js";
 import { Machine } from "./components/Machine/Machine.js";
 import { Result } from "./components/Result/Result.js";
+import { getMaxCount } from "./utils/symbols.js";
 
 console.clear();
 
@@ -22,6 +23,32 @@ root.append(machine, spinButton, result);
 //                                      ↙️
 spinButton.addEventListener("click", async () => {
   spinButton.disabled = true;
+
+  try {
+    result.setSpinning();
+
+    // const symbols = Promise.all([
+    //   wheel1,
+    //   wheel2,
+    //   wheel3,
+    // ]).map((wheel) => wheel.spin());
+
+    const symbols = Promise.all([wheel1.spin(), wheel2.spin(), wheel3.spin()]);
+    const sameSymbols = getMaxCount(symbols);
+
+  if(sameSymbols ===2){
+    result.setResult(10)
+  }
+  if(sameSymbols ===2){
+    result.setResult(10)
+  }
+
+
+  } catch (error) {
+    console.log(error);
+    result.setMachineChoked();
+  }
+
   /**
    * Hint 1:
    * The wheel elements have a spin method that returns a promise.
@@ -63,7 +90,7 @@ spinButton.addEventListener("click", async () => {
    * even if an error was thrown.
    */
 
-  spinButton.disabled = false;
+  result.setResult();
 });
 
 /**
