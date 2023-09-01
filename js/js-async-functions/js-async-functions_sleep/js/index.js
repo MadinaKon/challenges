@@ -5,20 +5,21 @@ const button10 = document.querySelector('[data-js="sleep-10-button"]');
 const body = document.body;
 
 // --v-- code here --v--
-
 button3.addEventListener("click", async () => {
   icon.textContent = "💤";
-  sleep(3);
+  await sleep(3);
   icon.textContent = "⏰";
 });
 
-button5.addEventListener("click", () => {
+button5.addEventListener("click", async () => {
   icon.textContent = "💤";
+  await sleep(5);
   icon.textContent = "⏰";
 });
 
-function handleSleepFor10Button() {
+async function handleSleepFor10Button() {
   icon.textContent = "💤";
+  await sleep(10);
   icon.textContent = "⏰";
 }
 
