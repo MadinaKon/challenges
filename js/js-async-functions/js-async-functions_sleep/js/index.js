@@ -7,20 +7,26 @@ const body = document.body;
 // --v-- code here --v--
 button3.addEventListener("click", async () => {
   icon.textContent = "💤";
+  body.classList.add("dark");
   await sleep(3);
   icon.textContent = "⏰";
+  body.classList.remove("dark");
 });
 
 button5.addEventListener("click", async () => {
   icon.textContent = "💤";
+  body.classList.add("dark");
   await sleep(5);
   icon.textContent = "⏰";
+  body.classList.remove("dark");
 });
 
 async function handleSleepFor10Button() {
   icon.textContent = "💤";
+  body.classList.add("dark");
   await sleep(10);
   icon.textContent = "⏰";
+  body.classList.remove("dark");
 }
 
 button10.addEventListener("click", handleSleepFor10Button);
