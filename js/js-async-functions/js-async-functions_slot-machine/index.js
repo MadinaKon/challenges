@@ -26,27 +26,22 @@ spinButton.addEventListener("click", async () => {
 
   try {
     result.setSpinning();
+    const spins = Promise.all([wheel1.spin(), wheel2.spin(), wheel3.spin()]);
 
-    // const symbols = Promise.all([
-    //   wheel1,
-    //   wheel2,
-    //   wheel3,
-    // ]).map((wheel) => wheel.spin());
+    const sameSymbols = getMaxCount();
+    const score = result.setResult(newPoints);
+    //  result.setResult();
+    console.log("score ", score);
 
-    const symbols = Promise.all([wheel1.spin(), wheel2.spin(), wheel3.spin()]);
-    const sameSymbols = getMaxCount(symbols);
-
-  if(sameSymbols ===2){
-    result.setResult(10)
-  }
-  if(sameSymbols ===2){
-    result.setResult(10)
-  }
-
-
+    if (sameSymbols === 3) {
+      return 100;
+    } else if (sameSymbols === 2) {
+      return 10;
+    }
+    return 0;
   } catch (error) {
-    console.log(error);
     result.setMachineChoked();
+    // score--;
   }
 
   /**
@@ -89,8 +84,6 @@ spinButton.addEventListener("click", async () => {
    * and make sure it is always executed after the wheels have stopped,
    * even if an error was thrown.
    */
-
-  result.setResult();
 });
 
 /**
