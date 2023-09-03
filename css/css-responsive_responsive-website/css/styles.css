@@ -244,7 +244,24 @@ width, etc. */
 
 /* Media Query Tablet */
 /* --- */
-/* Replace this comment with your media query. */
+@media (min-width: 900px) {
+  :root {
+    --font-size: 16px;
+  }
+  .main-content {
+    margin-top: var(--main-content-margin-top);
+    padding: var(--gap) 0 var(--gap) 0;
+    background: var(--navy-blue);
+  }
+  .card-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    gap: var(--gap);
+    padding: 50px;
+  }
+}
+
 /* --- */
 
 /* (min-width: 600px): small, sm, large mobile
@@ -266,5 +283,23 @@ width, etc. */
 
 /* Media Query Desktop */
 /* --- */
-/* Replace this comment with your media query. */
+@media (min-width: 1200px) {
+  .main-content {
+    margin-top: var(--main-content-margin-top);
+    /* padding: var(--gap) 0 var(--gap) 0; */
+    padding: 40px 0 40px 0;
+  }
+  .card-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .--forest {
+    background-image: url("../img/forest.jpg");
+    background-size: cover;
+    width: 1150px;
+  }
+}
 /* --- */
