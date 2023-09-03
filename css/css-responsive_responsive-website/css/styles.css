@@ -259,6 +259,7 @@ width, etc. */
     align-items: center;
     gap: var(--gap);
     padding: 50px;
+    justify-items: center;
   }
 }
 
@@ -275,12 +276,6 @@ width, etc. */
   }
 }
 
-@media (min-width: 1200px) {
-  :root {
-    --font-size: 20px;
-  }
-}
-
 /* Media Query Desktop */
 /* --- */
 @media (min-width: 1200px) {
@@ -290,16 +285,17 @@ width, etc. */
     padding: 40px 0 40px 0;
   }
   .card-section {
-    width: 100%;
-    display: flex;
+    /*  width: 100%;
+    display: flex; 
+    flex-direction: column;
+    */
+    display: grid;
     align-items: center;
     gap: 40px;
-    flex-direction: column;
   }
   .--forest {
     background-image: url("../img/forest.jpg");
     background-size: cover;
-    width: 1150px;
   }
 }
 /* --- */
