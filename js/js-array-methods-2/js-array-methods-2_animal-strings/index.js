@@ -31,12 +31,9 @@ const firstAnimalStartingWithLetterP = animalStrings.find((animal) =>
   animal.startsWith("p")
 );
 
-// console.log("firstAnimalStartingWithLetterP ", firstAnimalStartingWithLetterP);
-
 const indexOfGiraffe = animalStrings.findIndex((animal) =>
-  animal.startsWith("gir")
+  animal.startsWith("giraffe")
 );
-// console.log("indexOfGiraffe ", indexOfGiraffe);
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
@@ -55,7 +52,6 @@ const animalsSortedAlphabetically = animalStrings.sort((a, b) => {
   }
   return 0;
 });
-// console.log("animalsSortedAlphabetically ", animalsSortedAlphabetically);
 
 // Hint: Guess what? There is a string method called `endsWith()`.
 const anyAnimalEndsWithLetterZ = animalStrings.includes((animal) =>
@@ -66,11 +62,6 @@ const everyAnimalHasMoreThanTwoLetters = animalStrings.every(
   (animal) => animal.length > 2
 );
 
-// console.log(
-//   "everyAnimalHasMoreThanTwoLetters ",
-//   everyAnimalHasMoreThanTwoLetters
-// );
-
 // Hint: There are several ways to go here. Let's focus on two options:
 // Option 1: Concatenate all characters with `reduce()` and check for the `length` property of the result.
 // Option 2: Use `map()` to create an array with the length values of all strings,
@@ -78,8 +69,6 @@ const everyAnimalHasMoreThanTwoLetters = animalStrings.every(
 const sumOfAllAnimalCharacters = animalStrings.reduce((prev, current) => {
   return prev + current;
 }).length;
-
-console.log("sumOfAllAnimalCharacters ", sumOfAllAnimalCharacters);
 
 export {
   hippoExists,
