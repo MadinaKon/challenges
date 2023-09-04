@@ -5,10 +5,15 @@ const url = "https://swapi.dev/api/people";
 async function fetchData() {
   try {
     const response = await fetch(url);
-    console.log("response ", response);
-
     const jsonObj = await response.json();
-    console.log("jsonObj", jsonObj);
+
+    const results = jsonObj.results;
+
+    const r2d2 = results.find((result) => result.name === "R2-D2");
+
+    const r2d2EyeColor = r2d2.eye_color;
+    console.log("r2d2EyeColor ", r2d2EyeColor);
+
     if (!response.ok) {
       console.log("Bad request ", response);
     } else {
