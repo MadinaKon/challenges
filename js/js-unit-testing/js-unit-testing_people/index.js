@@ -43,8 +43,16 @@ export function getNameAndAge(people) {
   return people.map((person) => `${person.lastName} (${person.age})`);
 }
 
-export function getPeopleByAge(people, age) {}
+export function getPeopleByAge(people, age) {
+  const peopleList = people.filter((person) => person.age >= age);
+  const matches = peopleList.map(
+    (people) => `${people.firstName} ${people.lastName}`
+  );
 
+  return matches;
+}
+
+getPeopleByAge(people, 23);
 export function getPeopleNamesOlderThan(people, age) {
   const peopleList = people.filter((person) => person.age > age);
 
@@ -54,8 +62,6 @@ export function getPeopleNamesOlderThan(people, age) {
 
   return olderThan;
 }
-
-console.log(getPeopleNamesOlderThan(people, 23));
 
 export function getPeopleByLastName(people, lastName) {}
 

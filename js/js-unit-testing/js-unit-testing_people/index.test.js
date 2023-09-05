@@ -70,10 +70,14 @@ test('getNameAndAge() returns an array of formatted strings like this: "Skywalke
   ]);
 });
 
-// test("getPeopleByAge() returns an array of people of a certain age", () => {
-//   const result = getPeopleByAge();
-//   expect(result);
-// });
+test("getPeopleByAge() returns an array of people of a certain age", () => {
+  const result = getPeopleByAge(people, 23);
+  expect(result).toEqual([
+    "Max Mustermann",
+    "Erika Musterfrau",
+    "Luke Skywalker",
+  ]);
+});
 
 test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
   const result = getPeopleNamesOlderThan(people, 23);
