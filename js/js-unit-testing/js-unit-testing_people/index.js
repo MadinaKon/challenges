@@ -63,10 +63,19 @@ export function getPeopleNamesOlderThan(people, age) {
   return olderThan;
 }
 
-export function getPeopleByLastName(people, lastName) {}
+export function getPeopleByLastName(people, lastName) {
+  const peopleList = people.filter((person) => person.lastName === lastName);
+  const matches = peopleList.map((people) => `${people.lastName}`);
+  return matches;
+}
 
-export function findPersonById(people, id) {}
+export function findPersonById(people, id) {
+  const result = people.find((person) => person.id === id);
+  return result;
+}
 
-export function isAnyoneOlderThan(people, age) {}
+export function isAnyoneOlderThan(people, age) {
+  
+}
 
 export function getFullNamesSortedByAge(people) {}
