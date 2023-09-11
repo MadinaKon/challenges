@@ -17,9 +17,9 @@ describe("add function", () => {
 });
 
 describe("subtract function", () => {
-  test("returns 10 if called with subtract", () => {
+  test("returns 10 if called with subtract(15, 5)", () => {
     const result = subtract(15, 5);
-    expect(result).toBeCloseTo(10);
+    expect(result).toBe(10);
   });
 
   test("returns a negative value if the second argument is greater than the first one", () => {
