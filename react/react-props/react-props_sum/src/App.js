@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
+import { Sum } from "./Sum";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Sum valueA={100} valueB={33} />;
 }
