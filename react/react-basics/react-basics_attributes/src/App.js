@@ -20,9 +20,5 @@ function Article() {
 }
 
 export default function App() {
-  return (
-    <div>
-      <Article />
-    </div>
-  );
+  return <Article />;
 }
