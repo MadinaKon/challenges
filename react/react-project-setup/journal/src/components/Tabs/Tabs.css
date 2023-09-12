@@ -9,3 +9,8 @@ button {
   font-weight: 700;
   line-height: 24px; /* 150% */
 }
+
+.tabs__list,
+.tabs__item {
+  list-style: none;
+}
