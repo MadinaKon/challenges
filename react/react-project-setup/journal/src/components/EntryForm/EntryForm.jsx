@@ -7,7 +7,9 @@ export default function EntryForm() {
       <label htmlFor="name">
         Notes <textarea name="notes">Notes...</textarea>
       </label>
-      <button type="submit">Create</button>
+      <button type="submit" style={{ backgroundColor: "orange" }}>
+        Create
+      </button>
     </form>
   );
 }
