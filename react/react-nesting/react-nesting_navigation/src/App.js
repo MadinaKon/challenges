@@ -2,11 +2,12 @@ import "./styles.css";
 
 import avatar from "./img/avatar.jpg";
 import logo from "./img/logo.jpg";
+import Header from "./components/Header";
 
 export default function App() {
   return (
     <>
-      <header className="header">
+      <Header className="header">
         <a href="#">
           <img className="round-image" src={logo} alt="logo" />
         </a>
@@ -28,7 +29,7 @@ export default function App() {
         >
           <img className="round-image" src={avatar} alt="avatar" />
         </button>
-      </header>
+      </Header>
       <main>content goes here…</main>
     </>
   );
