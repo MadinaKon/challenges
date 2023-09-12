@@ -1,4 +1,4 @@
-import Entries from "./components/Entries/Entries";
+import Entries from "./components/EntriesSection/EntriesSection";
 import EntryForm from "./components/EntryForm/EntryForm";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
