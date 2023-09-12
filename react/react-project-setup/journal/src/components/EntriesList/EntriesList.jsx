@@ -5,9 +5,7 @@ export default function EntriesList({ title, date, text }) {
   return (
     <>
       <div className="entries-list--date">{date}</div>
-      <title className="entries-list--title">{title}</title>{" "}
-      {/* <Badge isActive="true" /> */}
-      <Badge />
+      <title className="entries-list--title">{title}</title> <Badge />
       <p className="entries-list--text">{text}</p>
     </>
   );
