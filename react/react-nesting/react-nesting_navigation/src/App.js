@@ -12,19 +12,11 @@ export default function App() {
   return (
     <>
       <Header className="header">
-        <Link href="#">
-          <Logo src={logo} alt="logo" />
-        </Link>
+        <Logo src={logo} alt="logo" />
         <Navigation>
-          <Link className="navigation__link" href="#home">
-            Home
-          </Link>
-          <Link className="navigation__link" href="#about">
-            About
-          </Link>
-          <Link className="navigation__link" href="#impressum">
-            Impressum
-          </Link>
+          <Link href="#home">Home</Link>
+          <Link href="#about">About</Link>
+          <Link href="#impressum">Impressum</Link>
         </Navigation>
         <button
           type="button"
