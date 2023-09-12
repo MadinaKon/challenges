@@ -1,0 +1,28 @@
+.entries-list--date {
+  color: var(--granite, #252629);
+
+  /* Headline Uppercase */
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 128.571% */
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+.entries-list--text {
+  color: var(--granite, #252629);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body small */
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.entries-list--title {
+  position: absolute;
+}

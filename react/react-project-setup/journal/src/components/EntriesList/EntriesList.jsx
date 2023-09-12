@@ -1,13 +1,14 @@
-// Each entry in the entry list has a title, a date,
-// a text and a favorite icon button.
+import Badge from "../Badge/Badge";
+import "./EntriesList.css";
 
 export default function EntriesList({ title, date, text }) {
   return (
     <>
-      <div>{date}</div>
-      <title>{title}</title>
-      <p>{text}</p>
-      <button type="button">addToFavorite</button>
+      <div className="entries-list--date">{date}</div>
+      <title className="entries-list--title">{title}</title>{" "}
+      {/* <Badge isActive="true" /> */}
+      <Badge />
+      <p className="entries-list--text">{text}</p>
     </>
   );
 }

@@ -2,7 +2,7 @@ import EntriesList from "../EntriesList/EntriesList";
 import Tabs from "../Tabs/Tabs";
 export default function Entries() {
   return (
-    <section>
+    <section className="entries-section">
       Entries
       <Tabs text="All Entries" count="3" />
       <Tabs text="Favorites" count="1" />

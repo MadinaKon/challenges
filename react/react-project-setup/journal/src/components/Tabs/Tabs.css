@@ -1,0 +1,11 @@
+button {
+  color: var(--nemo, #ff4a11);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body large */
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}

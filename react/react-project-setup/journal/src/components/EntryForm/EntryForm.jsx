@@ -4,9 +4,8 @@ export default function EntryForm() {
   return (
     <form>
       <title>New Entry</title>
-      <label htmlFor="name">
-        Motto <input type="text" name="name" />
-      </label>
+      <label htmlFor="name">Motto</label>
+      <input type="text" name="name" />
       <hr />
       <label htmlFor="name">
         Notes <textarea name="notes">Notes...</textarea>
