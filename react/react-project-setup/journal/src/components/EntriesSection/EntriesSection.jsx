@@ -24,11 +24,17 @@ export default function Entries() {
         title="Thats life in the city"
         date="FEB 27, 2028"
         text="Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque."
+        onFavorite={(isFavorite) =>
+          isFavorite ? setCount(count + 1) : setCount(count - 1)
+        }
       />
       <EntriesList
         title="Thats life in the city"
         date="FEB 27, 2028"
         text="Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si mihi. Et quidem se repellere, idque instituit docere sic omne animal, simul atque."
+        onFavorite={(isFavorite) =>
+          isFavorite ? setCount(count + 1) : setCount(count - 1)
+        }
       />
     </section>
   );
