@@ -6,51 +6,41 @@ export default function App() {
   // expected sequence
   const validCode = "🐡🐠🐋";
 
-  const handleClick = (fish) => {
-    setCode(code + fish);
+  // const handleClick = (emoji) => {
+  //   setCode(code + emoji);
+  // };
+
+  const handleClick = (event) => {
+    const value = event.target.textContent;
+    setCode(code + value);
+  };
+
+  const handleReset = () => {
+    setCode("");
   };
 
   return (
     <div className="container">
       <div className="button-container">
-        <button
-          type="button"
-          onClick={() => {
-            handleClick("🐡");
-          }}
-        >
+        {/* <button type="button" onClick={() => handleClick("🐡")}> */}
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Pufferfish">
             🐡
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            handleClick("🐋");
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Whale">
             🐋
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            handleClick("🐠");
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
         </button>{" "}
       </div>
 
-      <button
-        type="button"
-        onClick={() => {
-          setCode("");
-        }}
-      >
+      <button type="button" onClick={handleReset}>
         Reset
       </button>
       <h2>{code.length ? code : "?"}</h2>
