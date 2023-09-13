@@ -1,0 +1,15 @@
+.form__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 12px 40px;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff4a11;
+}
+input {
+  height: 62px;
+  align-self: stretch;
+}
