@@ -1,66 +1,14 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-// export default function App() {
-//   let code = "?";
-
-//   const validCode = "🐡🐠🐋";
-
-//   return (
-//     <div className="container">
-//       <div className="button-container">
-//         <button
-//           type="button"
-//           onClick={() => {
-//             console.log("Update Code!");
-//           }}
-//         >
-//           <span role="img" aria-label="Pufferfish">
-//             🐡
-//           </span>
-//         </button>
-//         <button
-//           type="button"
-//           onClick={() => {
-//             console.log("Update Code!");
-//           }}
-//         >
-//           <span role="img" aria-label="Whale">
-//             🐋
-//           </span>
-//         </button>
-//         <button
-//           type="button"
-//           onClick={() => {
-//             console.log("Update Code!");
-//           }}
-//         >
-//           <span role="img" aria-label="Clownfish">
-//             🐠
-//           </span>
-//         </button>{" "}
-//       </div>
-
-//       <button
-//         type="button"
-//         onClick={() => {
-//           console.log("Reset Code!");
-//         }}
-//       >
-//         Reset
-//       </button>
-//       <h2>{code}</h2>
-
-//       {code === validCode && <p>Valid code!</p>}
-//     </div>
-//   );
-// }
-
 export default function App() {
-  const [code, setCode] = useState("?");
-  // const [validCode, setValidCode] = useState("🐡🐠🐋");
-
+  const [code, setCode] = useState("");
+  // expected sequence
   const validCode = "🐡🐠🐋";
+
+  const handleClick = (fish) => {
+    setCode(code + fish);
+  };
 
   return (
     <div className="container">
@@ -68,7 +16,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            setCode("🐡");
+            handleClick("🐡");
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -78,7 +26,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            setCode("🐋");
+            handleClick("🐋");
           }}
         >
           <span role="img" aria-label="Whale">
@@ -88,7 +36,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            setCode("🐠");
+            handleClick("🐠");
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -97,10 +45,15 @@ export default function App() {
         </button>{" "}
       </div>
 
-      <button type="button" onClick={() => setCode(code)}>
+      <button
+        type="button"
+        onClick={() => {
+          setCode("");
+        }}
+      >
         Reset
       </button>
-      <h2>{code}</h2>
+      <h2>{code.length ? code : "?"}</h2>
 
       {code === validCode && <p>Valid code!</p>}
     </div>
