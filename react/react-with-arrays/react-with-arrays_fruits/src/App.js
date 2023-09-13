@@ -6,7 +6,7 @@ export default function App() {
     { name: "Banana", id: 2, color: "Yellow" },
     { name: "Orange", id: 3, color: "Orange" },
     { name: "Grapes", id: 4, color: "Purple" },
-    { name: "Strawberry", id: 5, color: "Red" },
+    { name: "Strawberry", id: 5, color: "Teal" },
   ];
 
   return (
