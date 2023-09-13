@@ -6,10 +6,6 @@ export default function App() {
   // expected sequence
   const validCode = "🐡🐠🐋";
 
-  // const handleClick = (emoji) => {
-  //   setCode(code + emoji);
-  // };
-
   const handleClick = (event) => {
     const value = event.target.textContent;
     setCode(code + value);
@@ -22,7 +18,6 @@ export default function App() {
   return (
     <div className="container">
       <div className="button-container">
-        {/* <button type="button" onClick={() => handleClick("🐡")}> */}
         <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Pufferfish">
             🐡
