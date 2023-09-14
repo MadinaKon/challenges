@@ -1,11 +1,9 @@
 export default function Form({ onCreateUser }) {
   function handleSubmit(event) {
     event.preventDefault();
-    onCreateUser(
-      event.target.elements.name.value,
-      event.target.elements.email.value
-    );
-    event.target.reset();
+    const form = event.target;
+    onCreateUser(form.elements.name.value, form.elements.email.value);
+    form.reset();
   }
 
   return (
