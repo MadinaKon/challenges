@@ -11,7 +11,7 @@ export default function App() {
   }
 
   function handleDecrement() {
-    setPeople(people - 1);
+    people <= 0 ? people : setPeople(people - 1);
   }
 
   return (
@@ -21,7 +21,7 @@ export default function App() {
       {people > 0 ? (
         <p>You are going to reserve a table for {people} people.</p>
       ) : (
-        <p>{people}</p>
+        <p>No reservation yet {people}</p>
       )}
     </div>
   );
