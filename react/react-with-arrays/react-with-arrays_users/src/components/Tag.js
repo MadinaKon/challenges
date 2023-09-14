@@ -3,11 +3,7 @@ import "./Tag.css";
 export default function Tag({ tag }) {
   return (
     <>
-      {tag === "admin" ? (
-        <li className="tag tag--highlight">{tag}</li>
-      ) : (
-        <li className="tag">{tag}</li>
-      )}
+      <li className={tag === "admin" ? "tag tag--highlight" : "tag"}>{tag}</li>
     </>
   );
 }
