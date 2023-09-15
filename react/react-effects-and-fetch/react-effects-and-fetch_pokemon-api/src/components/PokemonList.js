@@ -15,9 +15,6 @@ export default function PokemonList() {
 
   useEffect(() => {
     loadPokemon();
-    console.log(
-      "loadPokemon function is only executed when the app component is rendered initially"
-    );
   }, []);
 
   return (
