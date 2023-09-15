@@ -8,20 +8,36 @@ import { Fragment } from "react";
 
 export default function EntriesSection({
   entries,
+  filter,
   onToggleFavorite,
   onShowAllEntries,
   onShowFavoriteEntries,
+  allEntriesCount,
+  favoriteEntriesCount,
 }) {
   return (
     <section className="entries-section">
-      <Tabs>
+      {/* <Tabs>
         <Tab active onClick={onShowAllEntries}>
-          All Entries <Badge isActive>3</Badge>
+          All Entries <Badge isActive>{allEntriesCount}</Badge>
         </Tab>
         <Tab onClick={onShowFavoriteEntries}>
-          Favorites <Badge>1</Badge>
+          Favorites <Badge>{favoriteEntriesCount}</Badge>
+        </Tab>
+      </Tabs> */}
+      <Tabs>
+        <Tab active onClick={onShowAllEntries}>
+          All Entries{" "}
+          <Badge isActive={filter === "all"}>{allEntriesCount}</Badge>
+        </Tab>
+        <Tab active onClick={onShowFavoriteEntries}>
+          Favorites{" "}
+          <Badge isActive={filter === "favorites"}>
+            {favoriteEntriesCount}
+          </Badge>
         </Tab>
       </Tabs>
+
       <div className="entries-section__entries">
         {entries.map((entry, index) => (
           <Fragment key={entry.id}>
