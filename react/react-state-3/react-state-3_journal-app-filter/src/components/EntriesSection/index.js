@@ -6,14 +6,19 @@ import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment } from "react";
 
-export default function EntriesSection({ entries, onToggleFavorite }) {
+export default function EntriesSection({
+  entries,
+  onToggleFavorite,
+  onShowAllEntries,
+  onShowFavoriteEntries,
+}) {
   return (
     <section className="entries-section">
       <Tabs>
-        <Tab active>
+        <Tab active onClick={onShowAllEntries}>
           All Entries <Badge isActive>3</Badge>
         </Tab>
-        <Tab>
+        <Tab onClick={onShowFavoriteEntries}>
           Favorites <Badge>1</Badge>
         </Tab>
       </Tabs>
