@@ -22,11 +22,19 @@ export default function PokemonList() {
 
   return (
     <main>
-      <button type="button">Previous Page</button>
+      {currentPage === 0 ? null : (
+        <button
+          type="button"
+          onClick={() => {
+            setPage(currentPage - 20);
+          }}
+        >
+          Previous Page
+        </button>
+      )}
       <button type="button" onClick={() => setPage(currentPage + 20)}>
         Next Page
       </button>
-
       <ul>
         {pokemon.map(({ name }) => (
           <li key={name}>{name}</li>
