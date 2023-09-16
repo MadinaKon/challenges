@@ -11,37 +11,19 @@ export default function App() {
     latitude: 0,
   });
 
-  useEffect(() => {
-    async function getISSCoords() {
-      try {
-        const response = await fetch(URL);
-        const data = response.json();
-        console.log("DATA ", data);
-        setCoords(data);
-      } catch (error) {
-        console.log(error);
-      }
-      // data
-      //   .then((obj) => setCoords(obj.longitude, obj.latitude))
-      //   .catch((error) => console.error(error));
-
-      // setCoords(data.longitude, data.latitude);
-      // setCoords({ longitude: data.longitude, latitude: data.latitude });
-      // return data;
+  async function getISSCoords() {
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setCoords({ longitude: data.longitude, latitude: data.latitude });
+    } catch (error) {
+      console.log(error);
     }
+  }
 
-    //   let interValId = setInterval(() => {
-    //     getISSCoords()
-    //       .then((data) =>
-    //         setCoords({ longitude: data.longitude, latitude: data.latitude })
-    //       )
-    //       .catch((error) => console.error(error));
-    //   }, 5000);
-
-    //   clearInterval(interValId);
-    // }, []);
-    let interValId = setInterval(getISSCoords, 5000);
-    console.log("interValId ", interValId);
+  useEffect(() => {
+    getISSCoords();
+    let interValId = setInterval(getISSCoords, 2000);
     clearInterval(interValId);
   }, []);
 
@@ -51,15 +33,8 @@ export default function App() {
       <Controls
         longitude={coords.longitude}
         latitude={coords.latitude}
-        onRefresh={(coords) => setCoords(coords)}
-        // onRefresh={getISSCoords}
-        // onRefresh={() => getISSCoords(coords)}
-
-        // onRefresh={() => setCoords(coords.longitude, coords.latitude)}
-        // onRefresh={() => setCoords(coords)}
-        //  onRefresh={() => setCoords(coords.longitude, coords.latitude)}
+        onRefresh={getISSCoords}
       />
-      {JSON.stringify(coords)}
     </main>
   );
 }
