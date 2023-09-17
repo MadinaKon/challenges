@@ -43,9 +43,7 @@ function App() {
     const date = new Date().toLocaleDateString("en-us", {
       dateStyle: "medium",
     });
-    const id = uid();
-
-    setEntries([{ ...newEntry, date: date, id: id }, ...entries]);
+    setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
   return (
     <div className="app">
