@@ -16,6 +16,7 @@ export default function App() {
       const response = await fetch(URL);
       const data = await response.json();
       setCoords({ longitude: data.longitude, latitude: data.latitude });
+      // setCoords(data);
     } catch (error) {
       console.log(error);
     }
@@ -23,8 +24,13 @@ export default function App() {
 
   useEffect(() => {
     getISSCoords();
-    let interValId = setInterval(getISSCoords, 2000);
-    clearInterval(interValId);
+    let interValId = setInterval(getISSCoords, 5000);
+    // Cleanup function
+    return () => {
+      // Clear the interval when the component unmounts
+      // or when the dependency array changes
+      clearInterval(interValId);
+    };
   }, []);
 
   return (
