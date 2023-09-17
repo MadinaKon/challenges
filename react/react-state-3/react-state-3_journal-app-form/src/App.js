@@ -45,12 +45,24 @@ function App() {
     });
     setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
+
+  function handleDelete(id) {
+    setEntries(entries.filter((entry) => entry.id !== id));
+  }
+
   return (
     <div className="app">
       <Header />
       <main className="app__main">
-        <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        {entries.map((entry) => (
+          <>
+            <EntryForm onAddEntry={handleAddEntry} />
+            <EntriesSection
+              entries={entries}
+              onDelete={() => handleDelete(entry.id)}
+            />
+          </>
+        ))}
       </main>
       <Footer />
     </div>

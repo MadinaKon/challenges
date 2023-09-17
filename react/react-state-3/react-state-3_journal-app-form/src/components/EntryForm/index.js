@@ -7,12 +7,7 @@ export default function EntryForm({ onAddEntry }) {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    const newObj = {
-      motto: data.motto,
-      notes: data.notes,
-    };
-
-    onAddEntry(newObj);
+    onAddEntry(data);
   }
   return (
     <form className="entry-form" onSubmit={handleSubmit}>
