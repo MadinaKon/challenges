@@ -12,9 +12,6 @@ export default function StatusCheck() {
     try {
       const response = await fetch(apiStatusUrl);
 
-      console.log("response ", response);
-      console.log("response.ok ", response.ok);
-
       if (response.ok === true) {
         setStatusIcon("✅");
         setIsLoading(false);
@@ -23,7 +20,7 @@ export default function StatusCheck() {
         setIsLoading(false);
       }
     } catch (e) {
-      console.log(e);
+      setStatusIcon("🚨");
     }
   }
 
@@ -36,7 +33,6 @@ export default function StatusCheck() {
         ) : (
           <span className="status-check__icon">{statusIcon}</span>
         )}
-        {/* <span className="status-check__icon">{statusIcon}</span> */}
       </div>
       <button
         type="button"
