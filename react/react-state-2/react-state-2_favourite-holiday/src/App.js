@@ -7,10 +7,11 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    setHoliday(event.target.elements.holiday.value);
-    setDate(event.target.elements.date.value);
-    event.target.reset();
-    event.target.holiday.focus();
+    const form = event.target;
+    setHoliday(form.elements.holiday.value);
+    setDate(form.elements.date.value);
+    form.reset();
+    form.holiday.focus();
   }
 
   return (
