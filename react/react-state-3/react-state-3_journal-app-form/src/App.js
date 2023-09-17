@@ -3,7 +3,7 @@ import EntriesSection from "./components/EntriesSection";
 import EntryForm from "./components/EntryForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { uid } from "uid";
 
 const initialEntries = [
@@ -45,12 +45,24 @@ function App() {
     });
     setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
+
+  function handleDelete(id) {
+    setEntries(entries.filter((entry) => entry.id !== id));
+  }
+
   return (
     <div className="app">
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        {entries.map((entry) => (
+          <Fragment key={entry.id}>
+            <EntriesSection
+              entries={entries}
+              onDelete={() => handleDelete(entry.id)}
+            />
+          </Fragment>
+        ))}
       </main>
       <Footer />
     </div>
