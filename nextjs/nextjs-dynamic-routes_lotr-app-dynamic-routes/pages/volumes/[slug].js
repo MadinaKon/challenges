@@ -7,7 +7,7 @@ export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;
 
-  const volumeIndex = volumes.findIndex(({ slug }) => slug === slug);
+  const volumeIndex = volumes.findIndex((volume) => volume.slug === slug);
 
   const volume = volumes[volumeIndex];
   const nextVolume = volumes[volumeIndex + 1];
