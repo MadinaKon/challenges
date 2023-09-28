@@ -25,6 +25,7 @@ export default function Form() {
         altitude: event.target.value,
       },
     });
+    //  setMountain({ ...mountain.values, altitude: event.target.value });
   }
 
   function handleMountainRangeChange(event) {
@@ -35,6 +36,7 @@ export default function Form() {
         mountainRange: event.target.value,
       },
     });
+    //  setMountain({ ...mountain.values, mountainRange: event.target.value });
   }
 
   return (
