@@ -1,8 +1,8 @@
 import useSWR from "swr";
+import SingleProductListing from "./[id]";
 
 export default function ProductListing() {
   const { data, isLoading } = useSWR("/api/products");
-  console.log(" DATA ", data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -14,8 +14,12 @@ export default function ProductListing() {
 
   return (
     <ul>
+      <h2>List of products</h2>
       {data.map(({ id, name, description, price, currency, category }) => (
-        <li key={id}>{name}</li>
+        <li key={id}>
+          <SingleProductListing />
+          {name}
+        </li>
       ))}
     </ul>
   );
