@@ -4,12 +4,12 @@ const { Schema } = mongoose;
 
 const productSchema = new Schema({
   name: { type: String, required: true },
-  description: { type: String },
-  price: { type: Number },
-  currency: { type: String },
+  description: { type: String, required: true },
+  price: { type: Number, required: true },
+  currency: { type: String, required: true },
 });
 
-const Joke =
+const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
 
-export default Joke;
+export default Product;
