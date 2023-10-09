@@ -1,13 +1,17 @@
-import { products } from "../../../lib/products";
+// To find a single product by its id, you can use the Product model and the .findById() method:
+// Product.findById(id).
+import dbConnect from "@/db/connect";
+import Product from "@/db/models/Product";
 
-export default function handler(request, response) {
-  const { id } = request.query;
+export default async function handler(request, response) {
+  if (request.method === "GET") {
+    const { id } = request.query;
+    const product = await Product.findById(id);
 
-  const product = products.find((product) => product.id === id);
+    if (!product) {
+      return response.status(404).json({ status: "Not Found" });
+    }
 
-  if (!product) {
-    return response.status(404).json({ status: "Not Found" });
+    response.status(200).json(product);
   }
-
-  response.status(200).json(product);
 }
