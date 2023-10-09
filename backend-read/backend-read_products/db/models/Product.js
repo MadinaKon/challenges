@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+// import { Review } from "./Review";
+import Review from "./Review.js";
 
 const { Schema } = mongoose;
 
@@ -7,6 +9,7 @@ const productSchema = new Schema({
   description: { type: String },
   price: { type: Number },
   currency: { type: String },
+  reviews: { type: [Schema.Types.ObjectId], ref: Review },
 });
 
 const Product =
