@@ -68,7 +68,9 @@ export default function Product() {
           setIsEditMode(!isEditMode);
         }}
       >
-        Edit
+        <span role="img" aria-label="A pencil">
+          ✏️
+        </span>
       </StyledButton>
       <StyledButton type="button" onClick={() => handleDeleteProduct(id)}>
         Delete
