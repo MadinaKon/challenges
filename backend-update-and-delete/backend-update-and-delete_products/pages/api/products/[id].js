@@ -22,7 +22,6 @@ export default async function handler(request, response) {
       },
       { new: true }
     );
-    console.log(updatedProduct);
 
     return response.status(200).json(updatedProduct);
   }
