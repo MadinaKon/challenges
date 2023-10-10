@@ -15,7 +15,7 @@ export default async function handler(request, response) {
     response.status(200).json(product);
   }
   if (request.method === "PUT") {
-    const updatedProduct = await Joke.findByIdAndUpdate(
+    const updatedProduct = await Product.findByIdAndUpdate(
       id,
       {
         $set: request.body,
@@ -23,7 +23,7 @@ export default async function handler(request, response) {
       { new: true }
     );
     console.log(updatedProduct);
-    // { status: "Product successfully updated." }
+
     return response.status(200).json(updatedProduct);
   }
 }
