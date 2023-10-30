@@ -1,15 +1,18 @@
 import mongoose from "mongoose";
+// import { Review } from "./Review";
+import Review from "./Review.js";
 
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-  name: { type: String, required: true },
+  name: { type: String },
   description: { type: String },
   price: { type: Number },
   currency: { type: String },
+  reviews: { type: [Schema.Types.ObjectId], ref: Review },
 });
 
-const Joke =
+const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
 
-export default Joke;
+export default Product;
